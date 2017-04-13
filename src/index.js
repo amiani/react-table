@@ -199,6 +199,7 @@ export default React.createClass({
           return (
             <ThComponent
               key={i}
+              index={i}
               className={classnames(
                 'rt-pivot-header',
                 classes
@@ -214,6 +215,7 @@ export default React.createClass({
         return (
           <ThComponent
             key={i}
+            index={i}
             className={classnames(
               'rt-expander-header',
               classes
@@ -230,6 +232,7 @@ export default React.createClass({
       return (
         <ThComponent
           key={i}
+          index={i}
           className={classnames(
             classes
           )}
@@ -310,6 +313,7 @@ export default React.createClass({
           return (
             <ThComponent
               key={i}
+              index={i}
               className={classnames(
                 'rt-pivot-header',
                 'rt-resizable-header',
@@ -350,6 +354,7 @@ export default React.createClass({
         return (
           <ThComponent
             key={i}
+            index={i}
             className={classnames(
               'rt-expander-header',
               classes
@@ -367,6 +372,7 @@ export default React.createClass({
       return (
         <ThComponent
           key={i}
+          index={i}
           className={classnames(
             classes,
             'rt-resizable-header',
@@ -471,6 +477,7 @@ export default React.createClass({
           return (
             <ThComponent
               key={i}
+              index={i}
               className={classnames(
                 'rt-pivot-header',
                 column.sortable && '-cursor-pointer',
@@ -492,6 +499,7 @@ export default React.createClass({
         return (
           <ThComponent
             key={i}
+            index={i}
             className={classnames(
               'rt-expander-header',
               classes
@@ -511,6 +519,7 @@ export default React.createClass({
       return (
         <ThComponent
           key={i}
+          index={i}
           className={classnames(
             classes
           )}
