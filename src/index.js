@@ -907,21 +907,23 @@ export default React.createClass({
           style={tableProps.style}
           {...tableProps.rest}
         >
-          {hasHeaderGroups ? makeHeaderGroups() : null}
-          {makeHeaders()}
-          {showFilters ? makeFilters() : null}
-          <TbodyComponent
-            className={classnames(tBodyProps.className)}
-            style={{
-              ...tBodyProps.style,
-              minWidth: `${rowMinWidth}px`
-            }}
-            {...tBodyProps.rest}
-          >
-            {pageRows.map((d, i) => makePageRow(d, i))}
-            {padRows.map(makePadRow)}
-          </TbodyComponent>
-          {hasColumnFooter ? makeColumnFooters() : null}
+          <div className="rt-content">
+            {hasHeaderGroups ? makeHeaderGroups() : null}
+            {makeHeaders()}
+            {showFilters ? makeFilters() : null}
+            <TbodyComponent
+              className={classnames(tBodyProps.className)}
+              style={{
+                ...tBodyProps.style,
+                minWidth: `${rowMinWidth}px`
+              }}
+              {...tBodyProps.rest}
+            >
+              {pageRows.map((d, i) => makePageRow(d, i))}
+              {padRows.map(makePadRow)}
+            </TbodyComponent>
+            {hasColumnFooter ? makeColumnFooters() : null}
+          </div>
         </TableComponent>
         {showPagination ? (
           <PaginationComponent
